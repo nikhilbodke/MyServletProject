@@ -1,5 +1,7 @@
+<%@page import="com.bean.Student"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +10,15 @@
 </head>
 <body>
 
-<h1>ONE PAGE</h1>
+<%
 
-<!-- <jsp:forward page="two. jsp"> </jsp:forward> -->
+Student student=new Student(11,"Sachin",99);
+request.setAttribute("stud", student);
 
-<jsp:include page="two.jsp"> </jsp:include>
+%>
+
+
+<jsp:forward page="second.jsp"></jsp:forward>
 
 
 
